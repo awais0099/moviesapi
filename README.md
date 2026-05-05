@@ -1,29 +1,75 @@
-# 🎬 MoviesAPI - Java Spring Boot Project
+# 🎬 Movies API (Spring Boot)
 
-**MoviesAPI** is a full-featured RESTful API built with **Spring Boot** for managing movie data. It includes secure CRUD operations, file handling, user authentication, and more.
-
-## ✨ Features
-
-- ✅ CRUD operations for movies with DB + app-level validation
-- 🔐 Spring Security with JWT authentication & authorization
-- 📁 File upload and download support
-- 🔄 Pagination and sorting with Spring Data JPA
-- 📧 Send email with OTP for verification & password recovery
-- 🔑 Forgot password, reset password, and change password flows
-- ❌ Centralized exception handling with `@ControllerAdvice`
-- 📄 API Documentation using Swagger / OpenAPI
-- 📦 Clean architecture with DTOs, Services, and Repositories
-
-## 🚀 Technologies Used
-- Java 17  
-- Spring Boot  
-- Spring Security  
-- Spring Data JPA  
-- MySQL  
-- JWT  
-- Swagger/OpenAPI  
-- JavaMailSender
+A secure and scalable RESTful API for managing movie data, built using **Java and Spring Boot**. This project demonstrates backend development best practices including authentication, API design, validation, and real-world features like OTP-based verification and file handling.
 
 ---
 
-Feel free to clone and explore the code! Contributions are welcome 😊  
+## 📌 Overview
+
+Movies API allows users to manage movie records with secure access control. It includes authentication, pagination, file uploads, and email-based verification flows.
+
+This project showcases:
+- Secure API development with JWT
+- Clean architecture (Controller → Service → Repository)
+- Real-world backend features (OTP, password reset, file handling)
+
+---
+
+## ✨ Key Features
+
+- 🔐 JWT-based authentication & authorization  
+- 📧 Email-based OTP verification (registration & password reset)  
+- 🎬 CRUD operations for movies  
+- 🔄 Pagination and sorting  
+- 📁 File upload and download support  
+- ❌ Global exception handling (`@ControllerAdvice`)  
+- 📄 Swagger/OpenAPI documentation  
+- 🧱 Clean layered architecture with DTOs  
+
+---
+
+## ⚙️ Tech Stack
+
+- **Backend:** Java 17, Spring Boot  
+- **Security:** Spring Security, JWT  
+- **Database:** MySQL  
+- **Persistence:** Spring Data JPA  
+- **Documentation:** Swagger / OpenAPI  
+- **Email Service:** JavaMailSender  
+
+---
+
+## 🔗 API Endpoints (Sample)
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST | /auth/login | User login |
+| POST | /auth/register | User registration |
+| GET | /movies | Get all movies (paginated) |
+| POST | /movies | Add new movie |
+| PUT | /movies/{id} | Update movie |
+| DELETE | /movies/{id} | Delete movie |
+
+---
+
+## 🔄 API Flow
+
+1. User registers and verifies via OTP  
+2. User logs in → receives JWT token  
+3. Token is used to access protected endpoints  
+4. Movies API handles CRUD operations securely  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Java 17+
+- MySQL
+- Maven
+
+### Setup
+
+```bash
+git clone https://github.com/awais0099/moviesapi
+cd moviesapi
